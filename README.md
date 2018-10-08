@@ -2,14 +2,16 @@
 
 ## GCODE Scripts
 
-### Before print job starts
-### After print job completes
+### Octoprint events
+
+#### Before print job starts
+#### After print job completes
 
     M17; enable motors
     G1 X0 Y300 F3600; move to back left corner
     M18; disable motors
 
-### After print job is cancelled
+#### After print job is cancelled
 
     ; disable motors
     M84
@@ -20,7 +22,7 @@
     ;disable fan
     M106 S0
 
-### After print job is paused
+#### After print job is paused
 
     {% if pause_position.x is not none %}
     ; relative XYZE
@@ -38,7 +40,7 @@
     G1 X0 Y0
     {% endif %}
 
-### Before print job is resumed
+#### Before print job is resumed
 
     {% if pause_position.x is not none %}
     ; relative extruder
@@ -65,10 +67,34 @@
     {% if pause_position.f is not none %}G1 F{{ pause_position.f }}{% endif %}
     {% endif %}
 
-### Before tool change
-### After tool change
-### After connection to printer is established
+#### Before tool change
+#### After tool change
+#### After connection to printer is established
 
-    M92 E95 ;set default extrusion steps to 95, a better default
+    ;set default extrusion steps to 95, a better default
+    M92 E95 
 
-### Before connection to printer is closed
+#### Before connection to printer is closed
+
+### Custom scripts
+
+#### Move and disable motors
+
+    M17; enable motors
+    G1 X0 Y300 F3600; move to back left corner
+    M18; disable motors    
+
+## Plugins
+
+* Bed Leveling
+    * Front Left: 60, 60
+    * Front Right: 240, 60
+    * Back Left: 60, 240
+    * Back Right: 240, 240
+    * Center: 150, 150
+* Custom Control Editor
+    * Move and disable motors: _as above_        
+* DetailedProgress
+* Navbar Temperature
+* Print History Plugin
+* Printer Stats
