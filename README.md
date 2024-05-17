@@ -86,15 +86,15 @@
 
 ## Plugins
 
-* Bed Leveling?
+* ~Bed Leveling?~
     * Front Left: 60, 60
     * Front Right: 240, 60
     * Back Left: 60, 240
     * Back Right: 240, 240
     * Center: 150, 150
-* Custom Control Editor
-    * Move and disable motors: _as above_        
-* Detailed Progress
+* ~Custom Control Editor~
+    * ~Move and disable motors: _as above_~        
+* ~Detailed Progress~
 * Navbar Temp
 * ~Print History Plugin~
 * ~Printer Stats~
