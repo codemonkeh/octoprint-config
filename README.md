@@ -92,8 +92,8 @@
     * Back Left: 60, 240
     * Back Right: 240, 240
     * Center: 150, 150
-* ~Custom Control Editor~
-    * ~Move and disable motors: _as above_~        
+* Custom Control Editor
+    * Move and disable motors: _as above_
 * ~Detailed Progress~
 * Navbar Temp
 * ~Print History Plugin~
